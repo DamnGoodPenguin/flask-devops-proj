@@ -1,13 +1,20 @@
 version: '3'
 services:
-        terraform: 
-                build:
-                  context: .
-                  dockerfile: terraform.dockerfile
-        flaskwebapp:
-                build: 
-                  context: . 
-                ports:
-                        - "5000:5000"
+  jenkins:
+    build:
+      - context: .
+      - dockerfile: jenkins.dockerfile
+    ports:
+      - 8080:8080
+
+  terraform: 
+     build:
+       - context: .
+       - dockerfile: terraform.dockerfile
+  flaskwebapp:
+    build: 
+      - context: . 
+    ports:
+      - "5000:5000"
 
                 

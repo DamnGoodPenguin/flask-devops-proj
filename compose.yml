@@ -1,5 +1,9 @@
 version: '3'
 services:
+        terraform: 
+                build:
+                  context: .
+                  dockerfile: terraform.dockerfile
         flaskwebapp:
                 build: 
                   context: . 

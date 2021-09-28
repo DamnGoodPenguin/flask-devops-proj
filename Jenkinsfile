@@ -4,7 +4,8 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh "python flaskApp.py"
+				sh 'pip install flask'
+				sh 'python flaskApp.py'
 			}
 		}
 

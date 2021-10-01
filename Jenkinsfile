@@ -4,9 +4,7 @@ pipeline {
 	stages {
 		stage('Build') {
 			steps {
-				sh 'python -m ensurepip --upgrade'
-				sh 'pip install flask'
-				sh 'python flaskApp.py'
+				sh 'python3 flaskApp.py'
 			}
 		}
 
